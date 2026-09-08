@@ -1,29 +1,25 @@
 /**
  * Single source of truth for all content.
- * Edit here — every section reads from this file.
  */
 
-// --- CONTACT (edit before shipping) ---
-export const WHATSAPP = "923066358436"; // wa.me number, digits only
+// --- CONTACT ---
+export const WHATSAPP = "923066358436";
 export const PHONE = "+92 306 6358436";
-export const EMAIL = "your@email.com"; // TODO: your real email
-
-// Set to your headshot path in /public (e.g. "/musa.jpg"), or null for no photo.
+export const EMAIL = "your@email.com";
 export const PHOTO: string | null = "/musa.jpg";
 
 export const PROFILE = {
   name: "Musa Imran",
   role: "Next.js Developer & UI Designer",
   available: true,
-  intro:
-    "I build fast, responsive, and beautiful web applications using Next.js and Tailwind CSS — combining clean code with modern design.",
+  intro: "I build fast, responsive, and beautiful web applications using Next.js and Tailwind CSS — combining clean code with modern design.",
   heroTech: ["Next.js", "React", "TypeScript", "Framer Motion"],
 };
 
 export const SOCIALS = {
   github: "https://github.com/MusaSheikh-24",
-  linkedin: "#", // TODO
-  x: "#", // TODO
+  linkedin: "https://www.linkedin.com/in/musa-imran-172s/",
+  x: "https://x.com/MusaSheikh07",
 };
 
 export const ABOUT = {
@@ -88,7 +84,7 @@ export const STATS = [
 
 export interface Skill {
   name: string;
-  level: number; // 0–100
+  level: number;
 }
 
 export const SKILLS: Skill[] = [
@@ -107,6 +103,7 @@ export const TECHNOLOGIES = [
   "Tailwind CSS", "Framer Motion", "Git", "GitHub", "Cursor AI", "Responsive Design",
 ];
 
+// --- PROJECTS (FIXED: Spaces removed completely) ---
 export interface Project {
   name: string;
   kind: string;
@@ -115,9 +112,9 @@ export interface Project {
   live: string;
   code: string;
   featured?: boolean;
+  cover?: string;
 }
 
-// Add your other projects here (the calculator, etc.) — same shape.
 export const PROJECTS: Project[] = [
   {
     name: "Shop-Verse",
@@ -127,6 +124,7 @@ export const PROJECTS: Project[] = [
     live: "https://shop-verse-five-ashen.vercel.app/",
     code: "https://github.com/MusaSheikh-24/shop-verse",
     featured: true,
+    cover: "/shop-verse.png", // ✅ Space removed
   },
   {
     name: "3D Printer Hub",
@@ -136,5 +134,16 @@ export const PROJECTS: Project[] = [
     live: "https://3d-printer-one.vercel.app/",
     code: "https://github.com/MusaSheikh-24/3dPrinter",
     featured: true,
+    cover: "/3dprinter.png", // ✅ Space removed
   },
+  {
+    name: "travelCo",
+    desc: "International traveling website with seamless booking experience and modern UI.",
+    kind: "E-COMMERCE PLATFORM", // or TRAVEL PLATFORM
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Travel"],
+    live: "https://travel-co-mu.vercel.app/",
+    code: "https://github.com/MusaSheikh-24/travelCo",
+    cover: "/travelCo.png", // Add your image path here
+    featured: true,
+  }
 ];
