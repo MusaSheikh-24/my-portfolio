@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { PROFILE, SOCIALS, TECHNOLOGIES, PHOTO } from "@/lib/site";
 import { GitHubIcon, LinkedInIcon, XIcon } from "./icons";
+import Link from "next/link"; // Next.js ka Link component import kiya
 
 function Photo() {
     const [err, setErr] = useState(false);
@@ -80,14 +81,35 @@ export default function Hero() {
 
                     {/* Buttons: Full width on mobile, auto on laptop */}
                     <div className="mt-8 flex flex-col sm:flex-row flex-wrap justify-center lg:justify-start gap-3 w-full sm:w-auto">
-                        <a href="#projects" className="btn text-sm sm:text-base px-6 py-3 w-full sm:w-auto justify-center">
-                            View Projects →
+                        {/* Primary Resume Button - VIEW (opens in new tab) */}
+                        <a
+                            href="/Musa_Imran_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="btn text-sm sm:text-base px-6 py-3 w-full sm:w-auto justify-center gap-2 group inline-flex items-center"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:scale-110">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                                <polyline points="10 9 9 9 8 9" />
+                            </svg>
+                            View Resume
                         </a>
-                        <a href="#contact" className="btn btn-ghost text-sm sm:text-base px-6 py-3 w-full sm:w-auto justify-center">
-                            Contact Me
-                        </a>
-                    </div>
 
+                        {/* Secondary Projects Button */}
+                        <Link
+                            href="#projects"
+                            className="btn btn-ghost text-sm sm:text-base px-6 py-3 w-full sm:w-auto justify-center gap-2 group inline-flex items-center"
+                        >
+                            View Projects
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="transition-transform group-hover:translate-x-0.5">
+                                <line x1="5" y1="12" x2="19" y2="12" />
+                                <polyline points="12 5 19 12 12 19" />
+                            </svg>
+                        </Link>
+                    </div>
                     {/* Social Icons */}
                     <div className="mt-8 flex items-center justify-center lg:justify-start gap-4">
                         {[

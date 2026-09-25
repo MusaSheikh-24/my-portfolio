@@ -18,13 +18,20 @@ export default function Navbar() {
         <header className="fixed top-0 left-0 right-0 z-50 border-b border-white/6 bg-card/30 backdrop-blur-xl transition-all duration-300">
             <div className="shell flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
 
-                {/* Logo - Using Next.js Link */}
                 <Link
                     href="/"
                     className="flex items-center gap-2 text-lg font-bold tracking-tight hover:opacity-80 transition-opacity"
-                    onClick={() => setIsMenuOpen(false)}
+                    onClick={() => {
+                        setIsMenuOpen(false);
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth",
+                        });
+                    }}
                 >
-                    <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-white text-sm shadow-lg shadow-accent/20">M</span>
+                    <span className="grid h-8 w-8 place-items-center rounded-lg bg-accent text-white text-sm shadow-lg shadow-accent/20">
+                        M
+                    </span>
                     Musa
                 </Link>
 

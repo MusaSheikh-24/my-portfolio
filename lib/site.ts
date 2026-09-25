@@ -103,7 +103,7 @@ export const TECHNOLOGIES = [
   "Tailwind CSS", "Framer Motion", "Git", "GitHub", "Cursor AI", "Responsive Design",
 ];
 
-// --- PROJECTS (FIXED: Spaces removed completely) ---
+// --- PROJECTS ---
 export interface Project {
   name: string;
   kind: string;
@@ -124,7 +124,17 @@ export const PROJECTS: Project[] = [
     live: "https://shop-verse-five-ashen.vercel.app/",
     code: "https://github.com/MusaSheikh-24/shop-verse",
     featured: true,
-    cover: "/shop-verse.png", // ✅ Space removed
+    cover: "/shop-verse.png",
+  },
+  {
+    name: "Star-Cut",
+    kind: "Salon Website",
+    desc: "A modern and responsive salon website showcasing services, pricing, and essential business details with a clean, user-friendly UI/UX.",
+    tags: ["Next.js", "TypeScript", "Tailwind CSS", "Web Design"],
+    live: "https://star-cut.vercel.app/",
+    code: "https://github.com/MusaSheikh-24/starcut",
+    featured: true,
+    cover: "/star-cut.png",
   },
   {
     name: "3D Printer Hub",
@@ -134,16 +144,16 @@ export const PROJECTS: Project[] = [
     live: "https://3d-printer-one.vercel.app/",
     code: "https://github.com/MusaSheikh-24/3dPrinter",
     featured: true,
-    cover: "/3dprinter.png", // ✅ Space removed
+    cover: "/3dprinter.png",
   },
   {
     name: "travelCo",
-    desc: "International traveling website with seamless booking experience and modern UI.",
-    kind: "E-COMMERCE PLATFORM", // or TRAVEL PLATFORM
+    kind: "Travel Platform",
+    desc: "Modern international travel website featuring destinations, travel packages, and a clean, user-friendly interface.",
     tags: ["Next.js", "TypeScript", "Tailwind CSS", "Travel"],
     live: "https://travel-co-mu.vercel.app/",
     code: "https://github.com/MusaSheikh-24/travelCo",
-    cover: "/travelCo.png", // Add your image path here
     featured: true,
+    cover: "/travelCo.png",
   }
 ];
